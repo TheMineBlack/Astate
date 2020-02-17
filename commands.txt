@@ -1,0 +1,4 @@
+git add .
+git commit -m "description"
+git push origin master // pour envoyer les modifs
+git pull origin master // pour récupérer les fichiers
