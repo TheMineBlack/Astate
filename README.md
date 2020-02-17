@@ -1,2 +1,0 @@
-# Astate
-Myrillion &amp; Astate
