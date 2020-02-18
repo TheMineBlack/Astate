@@ -14,7 +14,7 @@ class FilActualite extends React.Component {
         <FlatList
           data={postData}
           keyExtractor={(item) => item.id.toString()}
-          renderItem={({item}) => <PostTemplate post={item}/>}
+          renderItem={({item}) => <Post post={item}/>}
         />
       </View>
     )
