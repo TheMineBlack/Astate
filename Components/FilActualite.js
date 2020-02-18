@@ -1,7 +1,7 @@
 import React from 'react'
 import {StyleSheet, View, Button, TextInput, FlatList, Text} from 'react-native'
 import posts from '../Helpers/postData'
-import PostTemplate from './PostTemplate'
+import Post from './Post'
 
 class FilActualite extends React.Component {
   render(){
