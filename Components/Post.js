@@ -1,7 +1,7 @@
 import React from 'react'
 import { StyleSheet, View, Text, Image, Button, Icon} from 'react-native'
 
-class PostTemplate extends React.Component {
+class Post extends React.Component {
   render() {
     const post = this.props.post
     return (
@@ -166,4 +166,4 @@ const styles = StyleSheet.create({
   }
 })
 
-export default PostTemplate
+export default Post
