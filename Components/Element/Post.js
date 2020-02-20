@@ -1,11 +1,14 @@
 import React from 'react'
-import { StyleSheet, View, Text, Image, Button, Icon} from 'react-native'
+import { StyleSheet, View, Text, Image, Button, Icon, TouchableOpacity} from 'react-native'
 
 class Post extends React.Component {
+
   render() {
-    const post = this.props.post
+    
+    const { post, displayDetailForPost } = this.props
+
     return (
-      <View style={styles.main_container}>
+      <TouchableOpacity onPress={() => displayDetailForPost(post.id)} style={styles.main_container}>
         <View style={styles.header_container}>
           <View style={styles.header_profile}>
             <View style={styles.header_profile_photoC}>
@@ -41,7 +44,7 @@ class Post extends React.Component {
             <Text style={[styles.setWhite54,{fontSize: 12}]}>=</Text>
           </View>
         </View>
-      </View>
+      </TouchableOpacity>
     )
   }
 }

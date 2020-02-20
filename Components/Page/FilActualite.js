@@ -5,13 +5,17 @@ import Post from '../Element/Post';
 
 class FilActualite extends React.Component {
 
+  displayDetailForPost = (idPost) => {
+    console.log("Display post with id " + idPost)
+  }
+
   render(){
     return(
       <View style={styles.main_container}>
         <FlatList
           data={postData}
           keyExtractor={(item) => item.id.toString()}
-          renderItem={({item}) => <Post post={item}/>}
+          renderItem={({item}) => <Post post={item} displayDetailForPost={this.displayDetailForPost} />}
         />
       </View>
     )
