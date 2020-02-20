@@ -20,7 +20,7 @@ class Post extends React.Component {
         </View>
 
         <View style={styles.header_save}>
-          <Image style={{height:20,width:20}} source={require('../Images/saveIcon.png')}/>
+          <Image style={{height:20,width:20}} source={require('../../Images/saveIcon.png')}/>
         </View>
 
         </View>
