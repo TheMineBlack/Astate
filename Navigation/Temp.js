@@ -1,21 +1,25 @@
 import 'react-native-gesture-handler';
 import React from 'react';
-import { NavigationContainer } from '@react-navigation/native';
-import { Navigation } from './Navigation/Navigation';
+import { Button, TouchableOpacity, StyleSheet, Image } from 'react-native';
+import FilActualite from './Components/Page/FilActualite';
+import Profile from './Components/Page/Profile';
+import {NavigationContainer} from '@react-navigation/native';
+import {createStackNavigator} from '@react-navigation/stack';
 
-export default function App() {
+
+const Stack = createStackNavigator();
+
+
+export default function App({navigation}) {
   return (
     <NavigationContainer>
-<<<<<<< HEAD
-      <Navigation />
-=======
       <Stack.Navigator>
         <Stack.Screen
           name="Home"
           component={FilActualite}
           headerMode="screen"
           options={{
-            headerRight: ({navigation}) => (
+            headerRight: () => (
               <TouchableOpacity onPress={() => navigation.navigate('Profile')}>
                 <Image style={styles.header_profile_photoC}/>
               </TouchableOpacity>
@@ -27,7 +31,6 @@ export default function App() {
             headerTintColor: "#fff",
             headerTitleStyle: {
               fontWeight: "bold",
-              fontSize: 20
             },
           }}
         />
@@ -37,7 +40,16 @@ export default function App() {
           options={{ title: "Mon profil"}}
         />
       </Stack.Navigator>
->>>>>>> e6eac06b3558460930859b20b2a614463be2cf4b
     </NavigationContainer>
   );
 }
+
+const styles = StyleSheet.create({
+  header_profile_photoC: {
+    height: 35,
+    width: 35,
+    backgroundColor: '#c45919',
+    borderWidth: 1,
+    borderRadius: 10
+  }
+})

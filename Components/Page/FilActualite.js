@@ -1,8 +1,20 @@
-import React from 'react'
-import {StyleSheet, View, Button, TextInput, FlatList, Text} from 'react-native'
-import posts from '../../Helpers/postData'
+import React from 'react';
+import {StyleSheet, View, Button, TextInput, FlatList, Text} from 'react-native';
+import posts from '../../Helpers/postData';
 import Post from '../Element/Post';
 
+<<<<<<< HEAD
+ export function FilActualite({navigation}){
+  return(
+    <View style={styles.main_container}>
+      <FlatList
+        data={postData}
+        keyExtractor={(item) => item.id.toString()}
+        renderItem={({item}) => <Post post={item}/>}
+      />
+    </View>
+  )
+=======
 class FilActualite extends React.Component {
 
   displayDetailForPost = (idPost) => {
@@ -20,6 +32,7 @@ class FilActualite extends React.Component {
       </View>
     )
   }
+>>>>>>> e6eac06b3558460930859b20b2a614463be2cf4b
 }
 
 const styles = StyleSheet.create({
@@ -36,5 +49,3 @@ const styles = StyleSheet.create({
     paddingLeft:5
   }
 })
-
-export default FilActualite
