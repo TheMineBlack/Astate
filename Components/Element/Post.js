@@ -4,19 +4,11 @@ import { StyleSheet, View, Text, Image, Button, Icon, TouchableOpacity} from 're
 class Post extends React.Component {
 
   render() {
-<<<<<<< HEAD
 
-    function onTweetPress() {
-      navigation.push('Details');
-    }
     const post = this.props.post
-=======
-    
-    const { post, displayDetailForPost } = this.props
 
->>>>>>> e6eac06b3558460930859b20b2a614463be2cf4b
     return (
-      <TouchableOpacity onPress={() => displayDetailForPost(post.id)} style={styles.main_container}>
+      <TouchableOpacity style={styles.main_container}>
         <View style={styles.header_container}>
           <View style={styles.header_profile}>
             <View style={styles.header_profile_photoC}>

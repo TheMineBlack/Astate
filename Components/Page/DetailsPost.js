@@ -3,7 +3,7 @@ import {StyleSheet, View, Button, TextInput, FlatList, Text} from 'react-native'
 
 class DetailsPost extends React.Component {
 
-  render() {
+render() {
     return (
       <View style={styles.main_container}>
         <Text>Détails du post</Text>
